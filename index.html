@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>FUERZA TACNA REGION</title>
+</head>
+
+<body onload="inicio()"></body>
+    <nav>
+        <div class="nav-wrapper amber darken-3">
+          <a href="#" class="brand-logo right">FUERZA TACNA - REGION</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li id="public" onclick="myFunction(1)"><a>PUBLICACIONES</a></li>
+            <li onclick="myFunction(2)"><a>ENCUESTAS</a></li>
+            <li onclick="myFunction(3)"><a>BASE DE DATOS</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h4>Aqui se visualizará las publicaciones recopiladas desde el FanPage de Fuerza Tacna</h3>
+    </div>
+    <div class="container" id="publicaciones">
+        <h3>Actualizado al 22/07/22 17:07</h3>
+        <div class="section">
+            
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Publicacion ID</th>
+                        <th>Fecha Post</th>
+                        <th>Reacciones</th>
+                        <th>Comentarios</th>
+                        <th>Compartidos</th>
+                        <th>Ver en Facebook</th>
+                    </tr>
+                </thead>
+                <tbody id="res">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="encuestas" class="container" style="display: none">
+        <h5>En desarrollo</h5>
+    </div>
+    <div id="estadisticas" class="container" style="display: none">
+        <h1>ESTADISTICA</h1>
+    </div>
+
+    <div class="container" id="basedatos">
+        <main>
+            <center>
+              <img class="responsive-img" style="width: 250px;" src="https://c.tenor.com/pgO8hZgOW5AAAAAC/loading-bar.gif" />
+              <div class="section"></div>
+        
+              <h5 class="indigo-text">Inicie sesión con su cuenta autorizada</h5>
+              <div class="section"></div>
+        
+              <div class="container">
+                <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        
+                  <form class="col s12" >
+                    <div class='row'>
+                      <div class='col s12'>
+                      </div>
+                    </div>
+        
+                    <div class='row'>
+                      <div class='input-field col s12'>
+                        <input class='validate' type='email' name='email' id='email' />
+                        <label for='email'>Ingrese su e-mail</label>
+                      </div>
+                    </div>
+        
+                    <div class='row'>
+                      <div class='input-field col s12'>
+                        <input class='validate' type='password' name='password' id='password' />
+                        <label for='password'>Ingrese su contraseña</label>
+                      </div>
+                      <label style='float: right;'>
+                                        <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                                    </label>
+                    </div>
+        
+                    <br />
+                    <center>
+                      <div class='row'>
+                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                      </div>
+                    </center>
+                  </form>
+                </div>
+              </div>
+            </center>
+        
+            <div class="section"></div>
+            <div class="section"></div>
+          </main>
+    </div>
+    <script>
+        $(document).load(function(){
+    //hide loader div here
+    $("#publicaciones").hide();
+});
+    </script>
+    <script src="./js/ajax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
